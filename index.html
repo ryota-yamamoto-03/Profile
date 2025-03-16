@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/past_now_button.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="./assets/img/yamamoto_ryota_profile.JPG">
+    <title>山本 涼太｜ポートフォリオサイト</title>
+</head>
+<body>
+    <!--  カーソル追尾  -->
+    <div class="cursor"></div>
+    
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- ナビゲーションメニュー -->
+    <nav class="nav-menu" id="nav">
+        <ul>
+            <li><a href="#profile">PROFILE<br><small>プロフィール</small></a></li>
+            <li><a href="#game">GAME<br><small>ゲーム作品</small></a></li>
+            <li><a href="#web">WEB<br><small>Web作品</small></a></li>
+            <li><a href="#video">VIDEO<br><small>ムービー作品</small></a></li>
+            <li><a href="#live">VIRTUAL LIVE<br><small>バーチャルライブ作品</small></a></li>
+            <li><a href="#award">AWARD<br><small>賞状</small></a></li>
+            <li><a href="#contact">CONTACT<br><small>お問い合わせ</small></a></li>
+        </ul>
+    </nav>
+
+    <!-- プロフィールセクションのヘッダー -->
+    <div class="profile-header">
+        <h1>PORTFOLIO</h1>
+    </div>
+
+    <!-- PAST / NOW 切り替えボタン -->
+    <div class="toggle-buttons">
+        <button class="toggle-btn active" onclick="showImage('past')">PAST</button>
+        <button class="toggle-btn" onclick="showImage('now')">NOW</button>
+    </div>
+
+    <!-- SHAREボタンのコンテナ -->
+    <div class="share-container">
+        <button class="share-btn" id="share-x">X で共有</button>
+        <button class="share-btn" id="share-line">LINE で共有</button>
+    </div>
+
+    <div class="profile-container" id="profile">
+        <!-- 左側：キャラクター画像と縦書きキャッチコピー -->
+        <div class="profile-left">
+            <!-- <img  class="profile-image" src="./assets/img/virtual_character.PNG" alt="キャラクター画像"> -->
+            <img class="profile-image" id="image1" src="./assets/img/virtual_character.PNG" alt="Past Image">
+            <img class="profile-image" id="image2" src="./assets/img/yamamoto_ryota_profile-removebg-preview.png" alt="Now Image">
+            <!-- <p class="catchphrase">ゲームの世界に飛び込み、一緒に創造しよう<br><small>Let's dive in and create together</small></p> -->
+        </div>
+
+        <!-- 右側：プロフィール詳細 -->
+        <div class="profile-right">
+            <h2>PROFILE</h2>
+            <div class="profile-item">
+                <span class="label">名前</span>
+                <span class="content">山本 涼太</span>
+            </div>
+            <hr>
+            <div class="profile-item">
+                <span class="label">性別</span>
+                <span class="content">男性</span>
+            </div>
+            <hr>
+            <div class="profile-item">
+                <span class="label">生年月日</span>
+                <span class="content">2003年4月19日</span>
+            </div>
+            <hr>
+            <div class="profile-item">
+                <span class="label">身長</span>
+                <span class="content">175cm</span>
+            </div>
+            <hr>
+            <div class="profile-item">
+                <span class="label">学歴</span>
+                <ul class="profile-list">
+                    <li><a href="https://nnn.ed.jp/" target="_blank">学校法人角川ドワンゴ学園N高等学校 卒業</a></li>
+                    <li><a href="https://www.vantan-gamehs.com/" target="_blank">バンタンゲームアカデミー高等部ゲーム制作専攻 卒業</a></li>
+                </ul>
+            </div>
+            <hr>
+            <!-- <div class="profile-item">
+                <span class="label">職歴</span>
+                <ul class="profile-list">
+                    <li><a href="https://dena.com/jp/" target="_blank">株式会社ディー・エヌ・エー 新卒入社</a></li>
+                    <li><a href="https://www.live.iriam.com/" target="_blank">株式会社IRIAM 出向社員</a></li>
+                </ul>
+            </div>
+            <hr> -->
+            <div class="profile-item">
+                <span class="label">趣味</span>
+                <span class="content">ゲーム、アニメ鑑賞、AIとお喋り</span>
+            </div>
+            <hr>
+            <div class="profile-item">
+                <span class="label">特技</span>
+                <span class="content">どこでも寝れる</span>
+            </div>
+            <hr>
+            <div class="profile-item">
+                <span class="label">短所</span>
+                <span class="content">飽きやすく熱しやすいところ</span>
+            </div>
+            <hr>
+            <b><h4>自己紹介(プロセカ専用)</h4></b>
+            <div class="content">
+                <p>
+                    <div class="greeting-container">
+                        <p id="greeting-message"></p>
+                    </div>
+                    山本涼太です！
+                    私は幼い頃からゲームが大好きで、気づいたら高校でゲームを作っていました。
+                    現在はゲーム業界を再び目指すために、プランナーの勉強をしています。
+                    夢は私が一番好きなゲームタイトル「プロセカ」のチームに入り最高のコンテンツをもっと世の中に広める企画を考え、実行できる人になることです！
+                    趣味はカラオケとゲームで、歌はミセス、ゲームはリズムゲームが好きです。どうぞよろしくお願いします！
+                </p>
+            </div>           
+            <hr>
+            <!-- YouTube動画埋め込み -->
+            <h3>紹介動画</h3>
+            <div class="youtube-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IqqOKzP3fhU?si=3pdNxno1g5uXGkOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <section id="game">
+        <h2>GAME</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wIoU7AfTHqg?si=qjtG0j7FXVlOXVR_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Gio60bpG4fo?si=ep1NpuvHkOFhPo3R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BfYBUHoQHBE?si=wpKYHpTAmOWLBhqe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zhaeknxWIWM?si=JiVotBB1nKk8WtUC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIj0JY_nP6Q?si=GIkNz5mQOhgLL3WM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section id="web">
+        <h2>WEB</h2>
+        <iframe width="560" height="315" src="https://ryota-yamamoto-03.github.io/BusinessCard/" frameborder="0"></iframe>
+    </section>
+
+    <section id="video">
+        <h2>VIDEO</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lcPGTcg1R40?si=cM1BrslPcJ6kNsgp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section id="live">
+        <h2>VIRTUAL LIVE</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RYw9vsKW6yY?si=XDUjVVQNDikcxDjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZW_CqXTrdo?si=V7p43tG676EmElSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section id="award">
+        <h2>AWARD</h2>
+        <img src="./assets/img/award_1.jpg" width="560" height="315" alt="最優秀賞1枚目">
+        <img src="./assets/img/award_2.jpg" width="560" height="315" alt="最優秀賞2枚目">
+        <img src="./assets/img/award_3.jpg" width="560" height="315" alt="最優秀賞3枚目">
+        <img src="./assets/img/award_4.jpg" width="560" height="315" alt="最優秀賞4枚目">
+    </section>
+
+    <section id="contact">
+        <h2>CONTACT</h2>
+        <small>お問い合わせ</small>
+        <div class="contact-container">
+            <form action="https://formspree.io/f/mqapaqkl" method="POST" class="contact-form">
+                
+                <!-- 名前 -->
+                <label for="name">名前</label>
+                <input type="text" id="name" name="name" required placeholder="お名前を入力してください">
+
+                <!-- 会社名 -->
+                 <label for="name">会社名(任意)</label>
+                 <input type="text" id="name" name="company" placeholder="会社名を入力してください">
+    
+                <!-- メールアドレス -->
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required placeholder="example@example.com">
+    
+                <!-- 件名（選択式） -->
+                <label for="subject">件名</label>
+                <select id="subject" name="subject" required>
+                    <option value="スカウト">スカウト</option>
+                    <option value="質問">質問</option>
+                    <option value="その他">その他</option>
+                </select>
+    
+                <!-- お問い合わせ内容 -->
+                <label for="message">お問い合わせ内容</label>
+                <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容を入力してください"></textarea>
+    
+                <!-- 送信ボタン -->
+                <button type="submit">送信</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- ロケットマークのTOPに戻るボタン -->
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-rocket"></i>
+    </button>
+    
+    <footer>
+        <p>&copy; 2025 Yamamoto Ryota / Portfolio</p>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

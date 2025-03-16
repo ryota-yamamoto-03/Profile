@@ -1,0 +1,521 @@
+/* 全体の背景をグラデーションに統一 */
+body {
+    /* background: linear-gradient(135deg, #FEFDD5, #F379A7); */
+    background-color: #F0F0F0;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 追尾する丸のスタイル */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #FF66BB; /* えむ色 */
+    border-radius: 50%;
+    pointer-events: none; /* クリックを無効化 */
+    transition: transform 0.1s ease-out; /* なめらかな動き */
+    z-index: 9999;
+}
+
+/* ハンバーガーメニューの基本スタイル（縦並び修正） */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px; /* 円のサイズ */
+    height: 60px;
+    background: white; /* 白い円 */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column; /* 縦並びに修正 */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 3本線のスタイル（縦並びを維持） */
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #333;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+/* 3本線の間隔を均等に調整 */
+.hamburger-menu span:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+/* ホバー時にアイコンの色を変更 */
+.hamburger-menu:hover span {
+    background: #FF66BB;
+}
+
+/* メニューが開いたときの「×」スタイル */
+.hamburger-menu.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* 「×」状態でもホバー時に色を変更 */
+.hamburger-menu.open:hover span {
+    background: #FF66BB;
+}
+
+/* ナビゲーションメニュー */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* 最初は画面外 */
+    width: 250px;
+    height: 100vh;
+    background: #EBEBF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+}
+
+/* ナビゲーションメニュー */
+.nav-menu ul {
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    text-align: left;
+    padding: 20px;
+    list-style: none;
+}
+
+/* ナビゲーションの各アイテム */
+.nav-menu ul li {
+    margin: 15px 0; /* 適度な間隔を追加 */
+}
+
+/* ナビゲーションリンク */
+.nav-menu ul li a {
+    color: #555476;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.nav-menu ul li a:hover {
+    color: #FF66BA;
+}
+
+/* メニューが開いたとき */
+.nav-menu.open {
+    right: 0;
+}
+
+/* テスト */
+/* SHAREボタンのコンテナ */
+.share-container {
+    position: fixed;
+    left: 10px; /* 画面左端 */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* SHAREボタンのスタイル */
+.share-btn {
+    background: #454466;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    writing-mode: vertical-rl; /* 縦書き */
+}
+
+/* ホバー時のエフェクト */
+.share-btn:hover {
+    background: #6A6B89;
+}
+/* ここまで */
+
+/* コンテナ全体 */
+.image-container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* プロフィールセクションのヘッダー */
+.profile-header {
+    width: 100%;
+    height: 200px; /* 高さを設定 */
+    background: url('../img/bg_music_themepark_world.webp') center/cover no-repeat; /* 背景画像 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px; /* 丸みを適用 */
+    overflow: hidden; /* 画像のはみ出しを防ぐ */
+}
+
+/* PROFILE テキスト */
+.profile-header h1 {
+    color: #FF66BA;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow:
+        -2px -2px 0 #fff,  
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+         2px  2px 0 #fff;
+}
+
+/* プロフィール情報 */
+.profile-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* プロフィール全体のレイアウト */
+.profile-container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#image2 {
+    display: none;
+}
+
+/* 左側：キャラクター画像とキャッチコピー */
+.profile-left {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+/* キャラクター画像 */
+.profile-image {
+    width: auto;
+    max-width: 100%;
+    height: 100%; /* 縦長に拡大 */
+    max-height: 100%; /* 枠内に収める */
+    object-fit: contain; /* 縦長を維持しつつ枠内に収める */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* 縦書きキャッチコピー */
+.catchphrase {
+    writing-mode: vertical-rl;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/* 右側：プロフィール情報 */
+.profile-right {
+    width: 60%;
+    padding-left: 20px;
+}
+
+/* 見出し */
+.profile-right h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 3px solid #FF66BA;
+    padding-bottom: 5px;
+}
+
+/* 各プロフィール項目 */
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+/* 学歴・職歴のリスト表示 */
+.profile-list {
+    margin: 5px 0;
+    padding-left: 20px;
+    list-style-type: disc; /* リストマークを表示 */
+}
+
+.profile-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-list li a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* ラベル（項目名） */
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* 内容 */
+.content {
+    color: #333;
+}
+
+/* 挨拶メッセージのスタイル */
+.greeting-container {
+    justify-content: left;    
+    text-align: left;
+}
+
+/* 横線 */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 5px 0;
+}
+
+/* YouTube動画埋め込み */
+.youtube-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.youtube-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 10px;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+#award img{
+    border-radius: 10px;
+}
+
+/* お問い合わせフォームのコンテナ */
+.contact-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* フォームのタイトル */
+.contact-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ラベルのスタイル */
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+/* 入力フィールドのスタイル（paddingと被らないよう調整） */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* パディング込みのサイズ計算 */
+    margin-bottom: 15px; /* ラベルとの間隔調整 */
+}
+
+/* 送信ボタン */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background: #FF66BA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #6A6B89;
+}
+
+footer {
+    background: #777490;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* テキスト選択時の背景色を変更 */
+::selection {
+    background: #FF66BA;
+    color: white; /* テキストの色も変更（オプション） */
+}
+
+/* TOPに戻るボタン */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #FF66BA; /* ピンク色 */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0.7;
+}
+
+#scrollTopBtn i {
+    font-size: 24px;
+    color: #fff
+}
+
+/* ホバー時のエフェクト */
+#scrollTopBtn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* スマホ対応（小さい画面ではサイズ調整） */
+@media screen and (max-width: 600px) {
+    #scrollTopBtn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* ===== ハンバーガーメニューのレスポンシブ対応 ===== */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        width: 100%;
+        right: -100%; /* 初期状態では画面外 */
+    }
+
+    .nav-menu.open {
+        right: 0; /* 開いた状態 */
+    }
+
+    .toggle-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ===== 画像のレスポンシブ対応 ===== */
+@media screen and (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-left {
+        width: 90%;
+    }
+
+    .profile-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ===== お問い合わせフォームのレスポンシブ対応 ===== */
+@media screen and (max-width: 600px) {
+    .contact-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* ===== 追尾カーソルのレスポンシブ対応（小さい画面では非表示） ===== */
+@media screen and (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}
