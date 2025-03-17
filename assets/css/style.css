@@ -5,6 +5,7 @@ body {
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    background: linear-gradient(135deg, #DADFF3, #CFF1F2);
 }
 
 /* スムーズスクロールを適用 */
@@ -145,36 +146,72 @@ nav ul li a {
     right: 0;
 }
 
-/* テスト */
-/* SHAREボタンのコンテナ */
-.share-container {
+/* 丸いSHAREボタン */
+.share-button {
     position: fixed;
-    left: 10px; /* 画面左端 */
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-/* SHAREボタンのスタイル */
-.share-btn {
-    background: #454466;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-    writing-mode: vertical-rl; /* 縦書き */
+    transition: transform 0.3s ease;
 }
 
-/* ホバー時のエフェクト */
-.share-btn:hover {
-    background: #6A6B89;
+/* ホバー時に拡大 */
+.share-button:hover {
+    transform: scale(1.1);
 }
-/* ここまで */
+
+/* SHARE テキスト */
+.share-text {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+/* SNSアイコンのコンテナ */
+.share-icons {
+    display: flex;
+    gap: 5px;
+}
+
+/* SNSアイコン */
+.share-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* X（旧Twitter）のカラー */
+#share-x {
+    background: #1DA1F2;
+}
+
+/* LINE のカラー */
+#share-line {
+    background: #06C755;
+}
+
+/* ホバー時の透明感 */
+.share-icons a:hover {
+    opacity: 0.8;
+}
 
 /* コンテナ全体 */
 .image-container {

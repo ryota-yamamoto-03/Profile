@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/past_now_button.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- FontAwesome CDN -->
@@ -17,7 +18,7 @@
 <body>
     <!--  カーソル追尾  -->
     <div class="cursor"></div>
-    
+
     <!-- ハンバーガーメニュー -->
     <div class="hamburger-menu" id="hamburger">
         <span></span>
@@ -31,7 +32,7 @@
             <li><a href="#profile">PROFILE<br><small>プロフィール</small></a></li>
             <li><a href="#game">GAME<br><small>ゲーム作品</small></a></li>
             <li><a href="#web">WEB<br><small>Web作品</small></a></li>
-            <li><a href="#video">VIDEO<br><small>ムービー作品</small></a></li>
+            <li><a href="#movie">MOVIE<br><small>ムービー作品</small></a></li>
             <li><a href="#live">VIRTUAL LIVE<br><small>バーチャルライブ作品</small></a></li>
             <li><a href="#award">AWARD<br><small>賞状</small></a></li>
             <li><a href="#contact">CONTACT<br><small>お問い合わせ</small></a></li>
@@ -50,15 +51,17 @@
     </div>
 
     <!-- SHAREボタンのコンテナ -->
-    <div class="share-container">
-        <button class="share-btn" id="share-x">X で共有</button>
-        <button class="share-btn" id="share-line">LINE で共有</button>
+    <div class="share-button" id="share-button">
+        <span class="share-text">SHARE</span>
+        <div class="share-icons">
+            <a href="#" id="share-x"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" id="share-line"><i class="fa-brands fa-line"></i></a>
+        </div>
     </div>
 
     <div class="profile-container" id="profile">
         <!-- 左側：キャラクター画像と縦書きキャッチコピー -->
         <div class="profile-left">
-            <!-- <img  class="profile-image" src="./assets/img/virtual_character.PNG" alt="キャラクター画像"> -->
             <img class="profile-image" id="image1" src="./assets/img/virtual_character.PNG" alt="Past Image">
             <img class="profile-image" id="image2" src="./assets/img/yamamoto_ryota_profile-removebg-preview.png" alt="Now Image">
             <!-- <p class="catchphrase">ゲームの世界に飛び込み、一緒に創造しよう<br><small>Let's dive in and create together</small></p> -->
@@ -154,8 +157,8 @@
         <iframe width="400" height="285" src="https://ryota-yamamoto-03.github.io/BusinessCard/" frameborder="0"></iframe>
     </section>
 
-    <section id="video">
-        <h2>VIDEO</h2>
+    <section id="movie">
+        <h2>MOVIE</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/lcPGTcg1R40?si=cM1BrslPcJ6kNsgp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
