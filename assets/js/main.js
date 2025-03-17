@@ -107,3 +107,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// メニュー内のリンクをクリックしたらスムーズスクロール＆メニューを閉じる
+navLinks.forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // デフォルトのリンク動作を防ぐ
+        const targetId = this.getAttribute("href").substring(1); // リンクのIDを取得
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" }); // スムーズスクロール
+        }
+
+        // メニューを閉じる
+        hamburger.classList.remove("open");
+        nav.classList.remove("open");
+        blurOverlay.classList.remove("open");
+    });
+});

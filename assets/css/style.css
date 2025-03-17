@@ -1,10 +1,15 @@
 /* 全体の背景をグラデーションに統一 */
 body {
-    /* background: linear-gradient(135deg, #FEFDD5, #F379A7); */
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #F0F0F0;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+}
+
+/* スムーズスクロールを適用 */
+html {
+    scroll-behavior: smooth;
 }
 
 nav ul {
@@ -202,6 +207,7 @@ nav ul li a {
          2px -2px 0 #fff,
         -2px  2px 0 #fff,
          2px  2px 0 #fff;
+    /* z-index: 1; */
 }
 
 /* プロフィール情報 */
@@ -337,6 +343,13 @@ hr {
 section {
     padding: 50px;
     text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto; /* 上下に余白を追加し、中央配置 */
+    padding: 20px;
+    background: #fff; /* 背景を白に */
+    border-radius: 10px; /* 角を丸く */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 #award img{
@@ -409,6 +422,56 @@ footer {
     margin-top: 20px;
 }
 
+/* OFFICIAL SNS タイトル */
+.official-sns-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* SNSリンクのコンテナ */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* SNSボタンのスタイル */
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    border: 2px solid #ddd;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* 各SNSのカラーリング */
+.social-btn.twitter { color: #1DA1F2; border-color: #1DA1F2; }
+.social-btn.youtube { color: #FF0000; border-color: #FF0000; }
+.social-btn.instagram { color: #E1306C; border-color: #E1306C; }
+
+/* ホバー時のスタイル */
+.social-btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* アイコンのスタイル */
+.social-btn i {
+    font-size: 20px;
+}
+
 /* テキスト選択時の背景色を変更 */
 ::selection {
     background: #FF66BA;
@@ -468,6 +531,11 @@ footer {
     .toggle-buttons {
         flex-direction: column;
         gap: 10px;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
     }
 }
 
