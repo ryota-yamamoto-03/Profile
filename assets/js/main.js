@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // 自己紹介画像切替
 function showImage(button) {
+    const videoFrame = document.getElementById('youtube-video');
     const pastBtn = document.querySelector('.toggle-btn[onclick="showImage(\'past\')"]');
     const nowBtn = document.querySelector('.toggle-btn[onclick="showImage(\'now\')"]');
 
@@ -29,11 +30,13 @@ function showImage(button) {
         document.getElementById('image2').style.display = 'none';
         pastBtn.classList.add("active");
         nowBtn.classList.remove("active");
+        videoFrame.src = "https://www.youtube.com/embed/kGsewoQrTjg";
     } else {
         document.getElementById('image1').style.display = 'none';
         document.getElementById('image2').style.display = 'block';
         nowBtn.classList.add("active");
         pastBtn.classList.remove("active");
+        videoFrame.src = "https://www.youtube.com/embed/Gio60bpG4fo";
     }
 }
 
