@@ -165,6 +165,7 @@ nav ul li a {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
 /* ホバー時に拡大 */
@@ -560,6 +561,7 @@ footer {
     transform: scale(1.1);
 }
 
+/* ===== 以下、レスポンシブ対応 ===== */
 /* スマホ対応（小さい画面ではサイズ調整） */
 @media screen and (max-width: 600px) {
     #scrollTopBtn {
@@ -636,6 +638,29 @@ footer {
 /* ===== 追尾カーソルのレスポンシブ対応（小さい画面では非表示） ===== */
 @media screen and (max-width: 768px) {
     .cursor {
+        display: none;
+    }
+}
+
+/* iPad/iPhone向けに調整 */
+@media screen and (max-width: 768px) {
+    .iframe-container {
+        aspect-ratio: 16 / 9;
+    }
+    .share-button{
+        display: none;
+    }
+    .award-container{
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .iframe-container {
+        aspect-ratio: 4 / 3;
+    }
+    .share-button{
         display: none;
     }
 }
