@@ -635,15 +635,11 @@ footer {
     }
 }
 
-/* ===== 追尾カーソルのレスポンシブ対応（小さい画面では非表示） ===== */
+/* iPad/iPhone向けに調整 */
 @media screen and (max-width: 768px) {
     .cursor {
         display: none;
     }
-}
-
-/* iPad/iPhone向けに調整 */
-@media screen and (max-width: 768px) {
     .iframe-container {
         aspect-ratio: 16 / 9;
     }
