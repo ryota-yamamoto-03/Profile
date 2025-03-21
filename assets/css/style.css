@@ -436,6 +436,9 @@ nav ul li a {
     overflow: auto;
     background: rgba(0,0,0,0.7);
     padding: 40px 20px;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 /* モーダル内コンテンツ（拡大） */
@@ -463,6 +466,15 @@ nav ul li a {
     margin-top: 20px;
     font-size: 16px;
     color: #333;
+}
+
+.description a{
+    text-decoration: none;
+    color: #FF67BB;
+}
+
+.description a:hover{
+    font-weight: bold;
 }
 
 /* 閉じるボタン */
@@ -688,6 +700,11 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
 }
 
 /* OFFICIAL SNS タイトル */
