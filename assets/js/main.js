@@ -127,3 +127,37 @@ navLinks.forEach(link => {
         blurOverlay.classList.remove("open");
     });
 });
+
+// モーダルを開く
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+}
+  
+// モーダルを閉じる
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "none";
+  
+    // YouTube動画を停止
+    const iframe = modal.querySelector("iframe");
+    if (iframe) {
+      const src = iframe.src;
+      iframe.src = "";
+      iframe.src = src;
+    }
+}
+  
+// モーダル外をクリックして閉じる処理を追加
+window.addEventListener("DOMContentLoaded", () => {
+    const modals = document.querySelectorAll(".modal");
+  
+    modals.forEach(modal => {
+      modal.addEventListener("click", function (event) {
+        // クリックされたのが modal（背景）自身なら閉じる
+        if (event.target === modal) {
+          closeModal(modal.id);
+        }
+      });
+    });
+});
+  

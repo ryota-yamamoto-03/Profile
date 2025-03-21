@@ -355,6 +355,173 @@ nav ul li a {
     padding-left: 20px;
 }
 
+/* セクションタイトル */
+.portfolio-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* カードのレイアウト */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-title {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* カード内のプラスアイコン（右下の拡大マーク） */
+.plus-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: #FF67BB;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+    z-index: 5;
+}
+
+/* ホバー時のアニメーション */
+.card:hover .plus-icon {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #FF67BB;
+}
+
+/* ホバーで拡大 */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* モーダルの全体 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.7);
+    padding: 40px 20px;
+}
+
+/* モーダル内コンテンツ（拡大） */
+.modal-content {
+    background: white;
+    margin: auto;
+    padding: 30px 20px 20px;
+    max-width: 900px; /* 拡大 */
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* iframeの表示サイズ */
+.modal-content iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+
+/* 説明文 */
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 閉じるボタン */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #FF67BB;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+
+/* ホバーで拡大 */
+.close:hover {
+    transform: scale(1.1);
+    background: #FF67BB;
+    color: #fff;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+        padding: 20px 15px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .close {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 15px 10px;
+    }
+
+    .close {
+        top: 10px;
+        right: 10px;
+    }
+}
+
 /* 見出し */
 .profile-right h2 {
     font-size: 24px;

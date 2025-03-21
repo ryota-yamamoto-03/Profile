@@ -108,7 +108,7 @@
             <hr> -->
             <div class="profile-item">
                 <span class="label">趣味</span>
-                <span class="content">ゲーム、アニメ鑑賞、AIとお喋り</span>
+                <span class="content">ゲーム、アニメ鑑賞、AIと創作活動</span>
             </div>
             <hr>
             <div class="profile-item">
@@ -148,11 +148,90 @@
 
     <section id="game">
         <h2>GAME</h2>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/wIoU7AfTHqg?si=qjtG0j7FXVlOXVR_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/Gio60bpG4fo?si=ep1NpuvHkOFhPo3R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/BfYBUHoQHBE?si=wpKYHpTAmOWLBhqe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/zhaeknxWIWM?si=JiVotBB1nKk8WtUC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/VIj0JY_nP6Q?si=GIkNz5mQOhgLL3WM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="portfolio-section">
+            <div class="card-container">
+                <!-- 1枚目の作品 -->
+                <div class="card" onclick="openModal('modal1')">
+                    <img src="./assets/img/game_01.jpg" alt="ゲーム作品1">
+                    <p class="card-title">【VRxRhythm Game】Reflexe Sniper</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- 2枚目の作品 -->
+                <div class="card" onclick="openModal('modal2')">
+                    <img src="./assets/img/game_02.jpg" alt="ゲーム作品2">
+                    <p class="card-title">【VRvsPC】天才小学生vs怪力校長</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- 3枚目の作品 -->
+                <div class="card" onclick="openModal('modal3')">
+                    <img src="./assets/img/game_03.jpg" alt="ゲーム作品3">
+                    <p class="card-title">【音ゲー】NCS</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- 4枚目の作品 -->
+                <div class="card" onclick="openModal('modal4')">
+                    <img src="./assets/img/game_04.jpg" alt="ゲーム作品4">
+                    <p class="card-title">【2D】STOPLINE</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- 5枚目の作品 -->
+                <div class="card" onclick="openModal('modal5')">
+                    <img src="./assets/img/game_05.jpg" alt="ゲーム作品5">
+                    <p class="card-title">【3DxFPS】Calces</p>
+                    <div class="plus-icon">+</div>
+                </div>
+          
+                <!-- モーダル（作品1） -->
+                <div class="modal" id="modal1">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/wIoU7AfTHqg" allowfullscreen></iframe>
+                        <p class="description">これは作品1の説明文です。ゲームの仕様や使用技術などを記載しましょう。</p>
+                    </div>
+                </div>
+          
+                <!-- モーダル（作品2） -->
+                <div class="modal" id="modal2">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/Gio60bpG4fo" allowfullscreen></iframe>
+                        <p class="description">こちらは作品2の紹介文です。どんな工夫をしたか、どのようなツールを使ったかを伝えられます。</p>
+                    </div>
+                </div>
+
+                <!-- モーダル（作品3） -->
+                <div class="modal" id="modal3">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/BfYBUHoQHBE" allowfullscreen></iframe>
+                        <p class="description">こちらは作品2の紹介文です。どんな工夫をしたか、どのようなツールを使ったかを伝えられます。</p>
+                    </div>
+                </div>
+                </div>
+        
+                <!-- モーダル（作品4） -->
+                <div class="modal" id="modal4">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/zhaeknxWIWM" allowfullscreen></iframe>
+                        <p class="description">こちらは作品2の紹介文です。どんな工夫をしたか、どのようなツールを使ったかを伝えられます。</p>
+                    </div>
+                </div>
+
+                <!-- モーダル（作品5） -->
+                <div class="modal" id="modal5">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal5')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/VIj0JY_nP6Q" allowfullscreen></iframe>
+                        <p class="description">こちらは作品2の紹介文です。どんな工夫をしたか、どのようなツールを使ったかを伝えられます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </section>
 
     <section id="web">
@@ -162,13 +241,64 @@
 
     <section id="movie">
         <h2>MOVIE</h2>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/lcPGTcg1R40?si=cM1BrslPcJ6kNsgp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="portfolio-section">
+            <div class="card-container">
+                <!-- 1枚目の作品 -->
+                <div class="card" onclick="openModal('modal6')">
+                    <img src="./assets/img/video_01.jpg" alt="ビデオ作品1">
+                    <p class="card-title">これがぼくのきもち【編集真似してみた】</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- モーダル（作品1） -->
+                <div class="modal" id="modal6">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal6')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/lcPGTcg1R40" allowfullscreen></iframe>
+                        <p class="description">これは作品1の説明文です。バーチャルライブの仕様や使用技術などを記載しましょう。</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </section>
 
     <section id="live">
         <h2>VIRTUAL LIVE</h2>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/RYw9vsKW6yY?si=XDUjVVQNDikcxDjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="iframe-container" width="560" height="315" src="https://www.youtube.com/embed/1ZW_CqXTrdo?si=V7p43tG676EmElSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="portfolio-section">
+            <div class="card-container">
+                <!-- 1枚目の作品 -->
+                <div class="card" onclick="openModal('modal7')">
+                    <img src="./assets/img/virtual_live_01.jpg" alt="バーチャルライブ作品1">
+                    <p class="card-title">[Virtual Live] Make A Move</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- 2枚目の作品 -->
+                <div class="card" onclick="openModal('modal8')">
+                    <img src="./assets/img/virtual_live_02.jpg" alt="バーチャルライブ作品2">
+                    <p class="card-title">レペゼン地球 非公式Virtual LIVE 12.26</p>
+                    <div class="plus-icon">+</div>
+                </div>
+
+                <!-- モーダル（作品1） -->
+                <div class="modal" id="modal7">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal7')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/RYw9vsKW6yY" allowfullscreen></iframe>
+                        <p class="description">これは作品1の説明文です。バーチャルライブの仕様や使用技術などを記載しましょう。</p>
+                    </div>
+                </div>
+          
+                <!-- モーダル（作品2） -->
+                <div class="modal" id="modal8">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal8')">&times;</span>
+                        <iframe src="https://www.youtube.com/embed/1ZW_CqXTrdo" allowfullscreen></iframe>
+                        <p class="description">こちらは作品2の紹介文です。どんな工夫をしたか、どのようなツールを使ったかを伝えられます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </section>
 
     <section id="award">
