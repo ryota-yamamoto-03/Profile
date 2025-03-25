@@ -399,8 +399,8 @@ nav ul li a {
     right: 10px;
     width: 32px;
     height: 32px;
-    background-color: #FF67BB;
-    color: #fff;
+    background-color: #fff;
+    color: #FF67BB;
     border-radius: 50%;
     font-size: 20px;
     font-weight: bold;
@@ -415,8 +415,8 @@ nav ul li a {
 /* ホバー時のアニメーション */
 .card:hover .plus-icon {
     transform: scale(1.1);
-    background-color: #fff;
-    color: #FF67BB;
+    background-color: #FF67BB;
+    color: #fff;
 }
 
 /* ホバーで拡大 */
