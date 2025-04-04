@@ -209,6 +209,18 @@ nav ul li a {
     background: #06C755;
 }
 
+#twitter-text{
+    color: #1DA1F2;
+}
+
+#youtube-text{
+    color: #FF0000;
+}
+
+#instagram-text{
+    color: #E1306C;
+}
+
 /* ホバー時の透明感 */
 .share-icons a:hover {
     opacity: 0.8;
@@ -520,6 +532,23 @@ nav ul li a {
         width: 35px;
         height: 35px;
         font-size: 20px;
+    }
+
+    .sns-title {
+        font-size: 14px; /* モバイルで小さめに */
+    }
+
+    .social-btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+    
+    .social-btn i {
+        font-size: 10px;
+    }
+
+    .social-btn .label{
+        display: none;
     }
 }
 
