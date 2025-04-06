@@ -30,13 +30,13 @@ function showImage(button) {
         document.getElementById('image2').style.display = 'none';
         pastBtn.classList.add("active");
         nowBtn.classList.remove("active");
-        videoFrame.src = "https://www.youtube.com/embed/kGsewoQrTjg";
+        videoFrame.src = "https://www.youtube.com/embed/-UpAY9w5EmQ";
     } else {
         document.getElementById('image1').style.display = 'none';
         document.getElementById('image2').style.display = 'block';
         nowBtn.classList.add("active");
         pastBtn.classList.remove("active");
-        videoFrame.src = "https://www.youtube.com/embed/Gio60bpG4fo";
+        videoFrame.src = "https://www.youtube.com/embed/p10tj_aLWmc";
     }
 }
 
