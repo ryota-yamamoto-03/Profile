@@ -36,7 +36,7 @@ function showImage(button) {
         document.getElementById('image2').style.display = 'block';
         nowBtn.classList.add("active");
         pastBtn.classList.remove("active");
-        videoFrame.src = "https://www.youtube.com/embed/uYHbVH5TUfk";
+        videoFrame.src = "https://www.youtube.com/embed/oKIvP1jLM1Q";
     }
 }
 
